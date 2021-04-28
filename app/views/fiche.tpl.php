@@ -1,10 +1,7 @@
-<?php
-include __DIR__ .'/../data/info.data.php';
 
-?>
 
 <main class="main-fiche">
-    <h1 class="titre-fiche">Reservoir Dogs</h1>
+    <h1 class="titre-fiche"><?= $movies->getName() ?></h1>
     <section class="section-fiche">
         <div class="acteur-fiche">
             <h3>Acteurs Principaux</h3>
@@ -18,27 +15,35 @@ include __DIR__ .'/../data/info.data.php';
         <div class="resume-fiche">
             <div class="infos">
                 <div>
-                    <img src="<?= $this->generateUrl('/img/reservoir-dogs.jpg')?>" alt="">
+                    <img src="<?= $this->generateUrl('img/'). $movies->getImage()?>" alt="">
                 </div>
                 <div>
                     <h3>Infos</h3>
                     <ul>
-                        <?php foreach ($movie[1] as $id => $value): ?>
-                        <li><?= $id?> : <?= $value?></li>  
-                        <?php endforeach ?>
+                        
+                        <li>Réalisateur : <?= $movies->getRealise() ?> </li>  
+                        <li>Scénario : <?= $movies->getScenario() ?> </li>
+                        <li>Décor : <?= $movies->getDecor() ?> </li>
+                        <li>Costume : <?= $movies->getCostume() ?> </li>
+                        <li>Montage : <?= $movies->getMontage() ?> </li>
+                        <li>Date de sortie : <?= $movies->getDate() ?> </li>
+                        <li>Budget : <?= $movies->getBudget() ?></li>
+                        
                     </ul>
                 </div>
             </div>
             <div class="synopsis-fiche">
                 <h3>Synopsis</h3>
-                <p><?= $synopsis[1]?></p>
+                <p><?= $movies->getSynopsis() ?></p>
             </div>
+            
         </div>
         <div class ="ost">
             <h3>Bande Originale</h3>
             <ul>
-                <?php foreach($soundtrack[1] as $title => $singer): ?>
-                <li><?=$title ?>  -  <?=$singer ?></li>
+                <?php foreach($songs as $song): ?>
+                    
+                <li>  <?= $song->getTitle() ?> - <?= $song->getAuthor() ?> </li>
                 <?php endforeach ?>
             </ul>
         </div>

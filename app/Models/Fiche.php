@@ -15,6 +15,7 @@ class Fiche extends CoreModel
     private $date;
     private $budget;
     private $synopsis;
+    private $soundtrack_id;
 
     
         
@@ -204,6 +205,26 @@ class Fiche extends CoreModel
     public function setRealise($realise)
     {
         $this->realise = $realise;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of soundtrack_id
+     */ 
+    public function getSoundtrack_id()
+    {
+        return $this->soundtrack_id;
+    }
+
+    /**
+     * Set the value of soundtrack_id
+     *
+     * @return  self
+     */ 
+    public function setSoundtrack_id($soundtrack_id)
+    {
+        $this->soundtrack_id = $soundtrack_id;
 
         return $this;
     }
