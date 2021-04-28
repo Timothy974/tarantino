@@ -3,8 +3,8 @@
 //chargement de mes dépendances avec l'autoloader de compser
 require __DIR__ . "/../vendor/autoload.php";
 
-require __DIR__ . '/../app/controllers/MainController.php';
-require __DIR__ . '/../app/data/cards.data.php';
+//require __DIR__ . '/../app/Controllers/MainController.php';
+//require __DIR__ . '/../app/data/cards.data.php';
 
 
 //j'instancie AltoRouter afin de créer mon propre routeur.
@@ -35,9 +35,9 @@ $router->map(
 
 $router->map(
     'GET',
-    '/fiche/',
+    '/fiche/[i:id]',
     [
-        'controller' => 'MainController',
+        'controller' => 'FicheController',
         'method' => 'fiche'
     ],
     'fiche'
@@ -59,9 +59,9 @@ $match = $router->match();
 //si la $match n'est pas false alors on execute la method du controller qui correspond
 if($match !== false) {
     //on récupére le controller à instancier
-    $controllerToUse = $match['target']['controller'];
+    $controllerToUse = "Tarantino\Controllers\\". $match['target']['controller'];
     //on récupére la method de controller à instancier
-    $methodToUse = $match['target']['method'];
+    $methodToUse =  $match['target']['method'];
     // On instancie le controller à utiliser. Son nom est stocké dans la variable $controllerToUse, celle-ci sera donc remplacée par le nom du controller à l'exécution
     $controller = new $controllerToUse();
     // On exécute la méthode dont le nom est stocké dans la variable $methodToUse;

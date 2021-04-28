@@ -9,16 +9,16 @@ include __DIR__ .'/../data/info.data.php';
         <div class="acteur-fiche">
             <h3>Acteurs Principaux</h3>
             <ul>
-                <li> <img src="./../public/img/keitel.jpg" alt=""> Harvey Keitel <br> dans le rôle de <br> M. White</li>
-                <li> <img src="./../public/img/roth.jpg" alt=""> Tim Roth <br> dans le rôle de <br> M. Orange</li>
-                <li> <img src="./../public/img/madsen.jpg" alt=""> Michael Madsen <br> dans le rôle de <br> de M. Blonde </li>
-                <li> <img src="./../public/img/buscemi.jpg" alt=""> Steve Buscemi <br> dans le rôle de <br> M. Pink</li>
+                <li> <img src="<?= $this->generateUrl('/img/keitel.jpg')?>" alt=""> Harvey Keitel <br> dans le rôle de <br> M. White</li>
+                <li> <img src="<?= $this->generateUrl('/img/roth.jpg')?>" alt=""> Tim Roth <br> dans le rôle de <br> M. Orange</li>
+                <li> <img src="<?= $this->generateUrl('/img/madsen.jpg')?>" alt=""> Michael Madsen <br> dans le rôle de <br> de M. Blonde </li>
+                <li> <img src="<?= $this->generateUrl('/img/buscemi.jpg')?>" alt=""> Steve Buscemi <br> dans le rôle de <br> M. Pink</li>
             </ul>
         </div>
         <div class="resume-fiche">
             <div class="infos">
                 <div>
-                    <img src="./../public/img/reservoir-dogs.jpg" alt="">
+                    <img src="<?= $this->generateUrl('/img/reservoir-dogs.jpg')?>" alt="">
                 </div>
                 <div>
                     <h3>Infos</h3>
