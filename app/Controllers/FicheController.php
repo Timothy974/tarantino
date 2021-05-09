@@ -2,6 +2,7 @@
 
 namespace Tarantino\Controllers;
 
+use Tarantino\Models\Actors;
 use Tarantino\Models\Fiche;
 use Tarantino\Models\Soundtrack;
 
@@ -15,12 +16,17 @@ class FicheController extends CoreController {
         $soundtrackModel = new Soundtrack();
         $songs = $soundtrackModel->findAll($params['id']);
 
+        $actorsModel = new Actors();
+        $actors = $actorsModel->findAllByMovie($params['id']);
+
+
 
 
         $this->display('fiche', [
             'id' => $params['id'],
             'movies'=> $movies,
-            'songs' => $songs
+            'songs' => $songs,
+            'actors' => $actors
         ]);
     
     }

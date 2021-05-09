@@ -3,9 +3,6 @@
 //chargement de mes dépendances avec l'autoloader de compser
 require __DIR__ . "/../vendor/autoload.php";
 
-//require __DIR__ . '/../app/Controllers/MainController.php';
-//require __DIR__ . '/../app/data/cards.data.php';
-
 
 //j'instancie AltoRouter afin de créer mon propre routeur.
 $router = new AltoRouter();
