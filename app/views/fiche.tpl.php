@@ -7,7 +7,7 @@
             <h3>Acteurs Principaux</h3>
             <ul>
                 <?php foreach ($actors as $actor) : ?>
-                <li> <img src="<?= $this->generateUrl('/img/' . $actor->getImage())?>" alt=""> <?= $actor->getName() ?> <br> dans le rôle de <br> <?= $actor->getRole() ?></li>
+                <li> <img src="<?= $this->generateUrl('img/' . $actor->getImage())?>" alt=""> <?= $actor->getName() ?> <br> dans le rôle de <br> <?= $actor->getRole() ?></li>
                     <?php endforeach?>
             </ul>
         </div>

@@ -11,10 +11,62 @@ DROP TABLE IF EXISTS `actors`;
 CREATE TABLE `actors` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
+  `role` varchar(64) NOT NULL,
   `image` varchar(64) NOT NULL,
+  `movie_id` int(10) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+INSERT INTO `actors` (`id`, `name`, `role`, `image`, `movie_id`) VALUES
+(2,	'Harvey Keitel',	'M. White',	'keitel.jpg',	1),
+(3,	'Tim Roth',	'M. Orange',	'roth.jpg',	1),
+(4,	'Michael Madsen',	'M. Blonde',	'madsen.jpg',	1),
+(5,	'Steve Buscemi',	'M. Pink',	'buscemi.jpg',	1),
+(6,	'Uma Thurman',	'Mia Wallace',	'uma-thurman.jpg',	2),
+(7,	'Ving Rhames',	'Marcellus Wallace',	'ving-rhames.jpg',	2),
+(8,	'Bruce Willis',	'Butch Coolidge',	'bruce-willis.jpg',	2),
+(9,	'Samuel Lee Jackson',	'Jules Winnfield',	'samuel-lee-jackson.jpg',	2),
+(10,	'John Travolta',	'Vincent Vega',	'john-travolta.jpg',	2),
+(11,	'Pam Grier',	'Jackie Brown',	'pam-grier.jpg',	3),
+(12,	'Samuel Lee Jackson',	'Ordell Robbie',	'samuel-lee-jackson.jpg',	3),
+(13,	'Robert De Niro',	'Louis Gara',	'robert-de-niro.jpg',	3),
+(14,	'Robert Foster',	'Max Cherry',	'robert-foster.jpg',	3),
+(15,	'Bridget Fonda',	'Mélanie Ralston',	'bridget-fonda.jpg',	3),
+(16,	'Uma Thurman',	'Beatrix Kiddo',	'uma-thurman.jpg',	4),
+(17,	'Lucy Liu',	'O-Ren Ishii',	'lucy-liu.jpg',	4),
+(18,	'Vivicia A Fox',	'Vernita Green',	'vivicia-fox.jpg',	4),
+(19,	'Daryl Hannah',	'Elle Driver',	'daryl-hannah.jpg',	4),
+(20,	'Chiaki Kuriyama',	'Gogo Yubari',	'chiaki-kuriyama.jpg',	4),
+(21,	'Uma Thurman',	'Beatrix Kiddo',	'uma-thurman.jpg',	5),
+(22,	'David Carradine',	'Bill',	'david-carradine.jpg',	5),
+(23,	'Michael Madsen',	'Budd',	'madsen.jpg',	5),
+(24,	'Daryl Hannah',	'Elle Driver',	'daryl-hannah.jpg',	5),
+(25,	'Gordon Liu',	'Paï Mei',	'gordon-liu.jpg',	5),
+(26,	'Kurt Russel',	'Stuntman Mike',	'kurt-russel.jpg',	6),
+(27,	'Zoë Bell',	'Zoë Bell',	'zoe-bell.jpg',	6),
+(28,	'Rosario Dawson',	'Abernathy',	'rosario.jpg',	6),
+(29,	'Vanessa Ferlito',	'Arlene',	'vanessa-ferlito.jpg',	6),
+(30,	'Sydney Tamiia Poitier',	'Jungle Julie',	'sydney-tamiia.jpg',	6),
+(31,	'Brad Pitt',	'Aldo Raine',	'brad.jpg',	7),
+(32,	'Christoph Waltz',	'Hans Landa',	'waltz.jpg',	7),
+(33,	'Mélanie Laurent',	'Shosanna Dreyfus',	'melanie.jpg',	7),
+(34,	'Diane Kruger',	'Bridget Von Hammersmark',	'diane.jpg',	7),
+(35,	'Eli Roth',	'Donny Donowitz',	'eli-roth.jpg',	7),
+(36,	'Jamie Foxx',	'Django Freeman',	'jamie.jpg',	8),
+(37,	'Christoph Waltz',	'King Schultz',	'waltz.jpg',	8),
+(38,	'Léonardo Di Caprio',	'Calvin J. Candie',	'leo.jpg',	8),
+(39,	'Samuel Lee Jackson',	'Stephen',	'samuel-lee-jackson.jpg',	8),
+(40,	'Kerry Washington',	' Broomhilda von Shaft',	'kerry.jpg',	8),
+(41,	'Kurt Russel',	'John Ruth',	'kurt-russel.jpg',	9),
+(42,	'Samuel Lee Jackson',	'Major Marquis Warren',	'samuel-lee-jackson.jpg',	9),
+(43,	'Jennifer Jason Leigh',	'Daisy Dommergue',	'jennifer.jpg',	9),
+(44,	'Tim Roth',	'Oswaldo Mobray',	'roth.jpg',	9),
+(45,	'Michael Madsen',	'Joe Gage',	'madsen.jpg',	9),
+(46,	'Léonardo Di Caprio',	'Rick Dalton',	'leo.jpg',	10),
+(47,	'Brad Pitt',	'Cliff Booth',	'brad.jpg',	10),
+(48,	'Margot Robbie',	'Sharon Tate',	'margot.jpg',	10),
+(49,	'Margaret Qualley',	'Pussycat',	'margaret.jpg',	10),
+(50,	'Al Pacino',	'Marvin Schwarz',	'alpacino.jpg',	10);
 
 DROP TABLE IF EXISTS `movie`;
 CREATE TABLE `movie` (
@@ -238,4 +290,4 @@ INSERT INTO `soundtrack` (`id`, `movieName`, `title`, `author`, `movie_id`) VALU
 (180,	'once upon',	'Miss Lily Langtry',	'Maurice Jarre',	10),
 (181,	'once upon',	'KHJ Batman Promotion / Batman Theme (interlude)',	'KHJ',	10);
 
--- 2021-05-05 14:48:16
+-- 2021-05-10 13:41:08
