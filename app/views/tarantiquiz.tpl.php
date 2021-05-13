@@ -24,4 +24,3 @@
 
     </div>
 </main>
-<script src="<?= $this->generateUrl('/js/script.js')?>" type="text/javascript"></script>

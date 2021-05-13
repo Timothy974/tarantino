@@ -50,6 +50,16 @@ $router->map(
     'tarantiquiz'
 );
 
+$router->map(
+    'GET',
+    '/citations/',
+    [
+        'controller' => 'MainController',
+        'method' => 'quotePage'
+    ],
+    'citations'
+);
+
 // j'utilise la method match de la class router pour comparer l'url à mes routes définies et si elle correspond à l'une d'elles alors $match contient des infos sur la route sous forme de tableau
 $match = $router->match();
 

@@ -25,6 +25,12 @@ class MainController extends CoreController {
         $this->display('tarantiquiz');
     }
 
+    public function quotePage (){
+        $this->display('citations');
+    }
+
+
+
     
 
  

@@ -17,6 +17,7 @@
             <ul>
                 <li><a href="<?= $this->generateUrl('')?>">Accueil</a></li>
                 <li><a href="<?= $this->generateUrl('biographie/')?>">Biographie</a></li>
+                <li><a href="<?= $this->generateUrl('citations/')?>">Tarantipliques</a></li>
                 <li><a href="<?= $this->generateUrl('tarantiquiz/')?>">TarantiQuiz</a></li>
             </ul>
         </nav>
