@@ -44,7 +44,7 @@ class Question {
     }
   }
   
-  // Regroup all  functions relative to the App Display
+  
   const display = {
     elementShown: function(id, text) {
       let element = document.getElementById(id);
@@ -68,7 +68,7 @@ class Question {
           quizApp();
         }
       }
-      // display choices and handle guess
+      
       for(let i = 0; i < choices.length; i++) {
         this.elementShown("choice" + i, choices[i]);
         guessHandler("guess" + i, choices[i]);
@@ -80,7 +80,7 @@ class Question {
     },
   };
   
-  // Game logic
+ 
   quizApp = () => {
     if (quiz.hasEnded()) {
       display.endQuiz();
@@ -90,7 +90,7 @@ class Question {
       display.progress();
     } 
   }
-  // Create Quiz
+  
   let quiz = new Quiz(questions);
   quizApp();
   

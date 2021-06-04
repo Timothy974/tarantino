@@ -10,12 +10,10 @@ var app = {
         document.getElementById('nav-next').addEventListener('click', app.handleClickOnNextButton);
         document.getElementById('nav-prev').addEventListener('click', app.handleClickOnPreviousButton);
         
-    },
-    
+    },  
 
     displayCurrentQuote: function () {
    
-
         let addQuote = document.getElementById('quote');
         let addAuthor = document.getElementById('author');
         addQuote.innerHTML = quotes[app.currentQuoteIndex].quote;
@@ -23,8 +21,7 @@ var app = {
     },
 
     handleClickOnNextButton: function () {
-      
-
+    
             app.currentQuoteIndex++;
             if (app.currentQuoteIndex > quotes.length-1) {
                 app.currentQuoteIndex = 0 ;      
@@ -38,11 +35,8 @@ var app = {
             if (app.currentQuoteIndex < 0) {
                 app.currentQuoteIndex = quotes.length-1 ;      
             }
-            app.displayCurrentQuote();  
-        
-    },
-
-   
+            app.displayCurrentQuote();   
+    },  
 };
 
 

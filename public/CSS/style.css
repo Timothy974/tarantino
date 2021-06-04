@@ -4,14 +4,27 @@
     margin: 0;
     padding: 0; 
    
-    
 }
-
 
 body { 
-    background-color: black;  
-   
+    background-color: black;    
 }
+
+h3 {
+    color: red;
+    font-family: 'Carter One', cursive;
+    font-size: 2em; 
+}
+
+h1 {
+    color: red;
+    font-family: 'Carter One', cursive;
+    font-size: 4em; 
+}
+
+/*
+**** NAV BAR ****
+*/
 
 .navbar {
     width: 100%;
@@ -19,12 +32,8 @@ body {
     display: flex;
     background-color: yellow;
     align-items: center;
-    
-    
-    
+   
 }
-
-
 
 .navbar ul {
     width: 100%;
@@ -45,137 +54,13 @@ body {
     color: red;
 }
 
-footer {
-    position : absolute;
-    position: fixed;
-    bottom : 0;
+/*
+**** HOMEPAGE ****
+*/
+
+main {   
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 3em;
-    background-color: yellow;
-    font-family: 'Carter One', cursive;
-    font-size: 1.5em;
-    color: red;
-    
-    
-}
-
-
-main {
-    
-    display: flex;
-    justify-content: center;
-    
-
-}
-
-
-.section-fiche {
-    display : flex;
-    margin-top : 3em;
-    margin-bottom: 5em;
-    justify-content: space-around;
-    
-    
-    
-}
-.section-fiche div {
-    margin-right: 25px;
-}
-
-
-
-.titre-fiche {
-    font-family: 'Carter One', cursive;
-    color: red;
-    font-size: 4em;
-    text-align : center;
-    margin-top: 1em;
-}
-
-.main-fiche {
-    width: 100%;
-    height: auto;
-    display: block; 
-    
-    
-}
-
-
-.synopsis-fiche {
-    margin-top : 3em;
-    
-}
-
-.acteur-fiche li {
-    display: flex;
-    font-family: 'Carter One', cursive;
-    color : yellow; 
-    list-style-type: none;
-    margin-bottom: 0.5em; 
-    margin-top: 1em;
-    
-}
-.acteur-fiche img {
-    border-radius: 50%;
-    margin-right: 1em;
-    
-}
-
-.resume-fiche {
-    display: flex;
-    flex-wrap: wrap;;
-    font-family: 'Carter One', cursive;
-    color : yellow;
-    width : 30%;
-    align-items: baseline;
-    height: 50vh;
-
-    
-}
-
-.ost {
-    width: 30%;
-    
-}
-
-.ost li {
-    font-family: 'Carter One', cursive;
-    color : yellow; 
-    list-style-type: none;
-    margin-bottom: 0.7em; 
-    
-}
-
-h3 {
-    color: red;
-    font-family: 'Carter One', cursive;
-    font-size: 2em; 
-}
-
-h1 {
-    color: red;
-    font-family: 'Carter One', cursive;
-    font-size: 4em; 
-}
-
-.infos {
-    display: flex;
-    
-    
-   
-}
-
-.resume-fiche img {
-    width : 200px;
-    margin-right: 1em;
-    padding-top: 3.5em;
-}
-
-.resume-fiche li {
-    list-style-type: none;
 }
 
 .container {
@@ -188,6 +73,13 @@ h1 {
     animation: fadein 3s;
 }
 
+.card-container {
+    width: 200px;
+    height: 300px;
+    margin-right: 2em;
+    margin-bottom: 4em   
+}
+
 @keyframes fadein {
     from {
         opacity: 0;
@@ -198,25 +90,19 @@ h1 {
     }
 }
 
-.card-container {
-    width: 200px;
-    height: 300px;
-    margin-right: 2em;
-    margin-bottom: 4em;
-    
-}
+/*
+**** FLIP CARDS ****
+*/
 
 .card-container:hover .card {
     transform: rotateY(180deg);
 }
-
 
 .card {
     width: 200px;
     height: 300px;
     transition: transform 1s ease-in-out;
     transform-style: preserve-3d;
-
 }
 
 .card figure {
@@ -232,10 +118,8 @@ h1 {
 
 .card .front {
     width: 200px;
-    height: 300px;
-    
+    height: 300px;   
     border-radius: 15px;
-
 }
 
 figure img {
@@ -243,22 +127,125 @@ figure img {
     height: 300px;
     background-size: cover;
     border-radius: 15px;
-    filter: drop-shadow(0 -4mm 2mm rgb(134, 2, 19));
-    
+    filter: drop-shadow(0 -4mm 2mm rgb(134, 2, 19));  
 }
-
 
 .card .back {
     width: 200px;
     height: 300px;
     background-color: black;
+    background-size: cover;
     color: red;
     transform: rotateY(180deg);
     text-align: center;
     border-radius: 15px;
-    
-
 }
+
+/*
+**** FOOTER ****
+*/
+
+footer {
+    position : absolute;
+    position: fixed;
+    bottom : 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3em;
+    background-color: yellow;
+    font-family: 'Carter One', cursive;
+    font-size: 1.5em;
+    color: red; 
+}
+
+/*
+**** FICHE TEMPLATE ****
+*/
+
+.section-fiche {
+    display : flex;
+    margin-top : 3em;
+    margin-bottom: 5em;
+    justify-content: space-around;  
+}
+
+.section-fiche div {
+    margin-right: 25px;
+}
+
+.titre-fiche {
+    font-family: 'Carter One', cursive;
+    color: red;
+    font-size: 4em;
+    text-align : center;
+    margin-top: 1em;
+}
+
+.main-fiche {
+    width: 100%;
+    height: auto;
+    display: block; 
+}
+
+.synopsis-fiche {
+    margin-top : 3em; 
+}
+
+.acteur-fiche li {
+    display: flex;
+    font-family: 'Carter One', cursive;
+    color : yellow; 
+    list-style-type: none;
+    margin-bottom: 0.5em; 
+    margin-top: 1em;   
+}
+
+.acteur-fiche img {
+    border-radius: 50%;
+    margin-right: 1em;    
+}
+
+.resume-fiche {
+    display: flex;
+    flex-wrap: wrap;;
+    font-family: 'Carter One', cursive;
+    color : yellow;
+    width : 30%;
+    align-items: baseline;
+    height: 50vh;  
+}
+
+.ost {
+    width: 30%;    
+}
+
+.ost li {
+    font-family: 'Carter One', cursive;
+    color : yellow; 
+    list-style-type: none;
+    margin-bottom: 0.7em;    
+}
+
+.infos {
+    display: flex;  
+}
+
+.resume-fiche img {
+    width : 200px;
+    margin-right: 1em;
+    padding-top: 3.5em;
+}
+
+.resume-fiche li {
+    list-style-type: none;
+}
+
+
+/*
+**** QUIZ ****
+*/
 
 .container-quiz {
     margin-top: 1em;
@@ -281,8 +268,6 @@ figure img {
     align-items: center;
 }
 
-
-
 .btn {
     width: 300px;
     height : 150px;
@@ -303,9 +288,12 @@ figure img {
     color: red;
     font-family: 'Carter One', cursive;
     font-size: 30px;
-    margin-bottom: 50px;
-    
+    margin-bottom: 50px;  
 }
+
+/*
+**** CITATIONS ****
+*/
 
 div.mainquote {
     margin-top: 1em;
@@ -313,19 +301,16 @@ div.mainquote {
     font-size: 3em;
     font-family: 'Carter One', cursive;
     width: 60%;
-    height: 60%;
+    height: 100%;
     text-align: center;
 }
 
 #author {
-    margin-top: 1em;
-    
-    
+    margin-top: 1em;   
 }
 
 .buttonnav {
-    margin-top: 1em;
-   
+    margin-top: 1em;  
 }
 
 #nav-prev {
@@ -351,6 +336,7 @@ div.mainquote {
 #nav-prev:hover {
     background-color: black;
 }
+
 #nav-next:hover {
     background-color: black;
 }

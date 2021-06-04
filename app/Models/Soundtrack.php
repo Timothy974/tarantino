@@ -12,6 +12,7 @@ class Soundtrack extends CoreModel {
     private $author;
     private $movie_id;
 
+
     public function find($movie_id)
     {
         $pdo = Database::getPDO();
